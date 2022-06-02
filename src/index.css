@@ -1,13 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.navBar {
+  display: flex;
+  padding: 16px 80px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  position: sticky;
+  top: 0px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.navLinks a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.navLinks a:hover {
+  text-decoration: underline;
+}
+
+.heroSection {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 96px);
+  background-image: url(./images/hero-image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(50%) drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.5));
+  margin-bottom: 16px;
+}
+
+.heroInfo {
+  text-align: center;
+}
+
+.heroInfo h1 {
+  font-size: 3em;
+  text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.heroInfo p {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 16px;
+  color: white;
+  text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.heroInfo button {
+  background-color: rgb(50, 149, 177);
+  padding: 16px 80px;
+  margin-top: 32px;
+  font-weight: 600;
+  font-size: 1.2em;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.testimonialSection {
+  display: grid;
+  place-items: center;
+  padding: 100px 0px;
+}
+
+.testimonyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 80%;
+  gap: 32px;
+  grid-template:
+    "a a b c"
+    "d e e c";
+}
+
+@media (max-width: 1200px) {
+  .testimonyGrid {
+    grid-template:
+      "a a b b"
+      "c c c c"
+      "d d e e";
+  }
+}
+@media (max-width: 700px) {
+  .testimonyGrid {
+    grid-template:
+      "a a a a"
+      "b b b b"
+      "c c c c"
+      "d d d d"
+      "e e e e";
+  }
+}
+
+.testimony {
+  background-color: rgb(99, 163, 177);
+  padding: 32px;
+  grid-column: span 2;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.testimony div {
+  display: flex;
+  align-items: center;
+}
+
+.testimony img {
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.testimony h1 {
+  font-size: 1.3em;
+}
+
+.testimony h2 {
+  font-size: 1em;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+#testimony1 {
+  grid-area: a;
+}
+#testimony2 {
+  grid-area: b;
+  background-color: rgb(133, 101, 133);
+}
+#testimony3 {
+  grid-area: c;
+  background-color: white;
+  color: black;
+}
+#testimony4 {
+  grid-area: d;
+  background-color: rgb(47, 83, 47);
+}
+#testimony5 {
+  grid-area: e;
+  background-color: rgb(119, 82, 82);
+}
+
+.footer {
+  background-color: rgb(75, 75, 75);
+  padding: 100px 80px 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer ul {
+  list-style: none;
+}
+.footLinks li {
+  margin-bottom: 16px;
+}
+.footLinks li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+.footLinks li a:hover {
+  text-decoration: underline;
+}
+
+.footSocial {
+  display: flex;
+  gap: 32px;
+}
+
+.footSocial li {
+  border: 2px solid white;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
 }
