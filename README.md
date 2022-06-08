@@ -66,7 +66,7 @@ export const function MyComponent() => {
 }
 ```
 
-There are many tools on vs code to help you program faster. If you have an extension such as [JSX Code Snippets](https://marketplace.visualstudio.com/items?itemName=skyran.js-jsx-snippets) you can simply type `rfc`
+There are many tools in VS code to help you program faster. If you have an extension such as [JSX Code Snippets](https://marketplace.visualstudio.com/items?itemName=skyran.js-jsx-snippets) you can simply type `rfc`
 in the file and hit tab. This will automatically create a react function component and give it the same name as the file.
 
 Naming your default export component the same as your file is a common practice in React. One we will use in this exercise.
@@ -95,7 +95,7 @@ Passing props down to a component is really easy. Its just like setting an html 
 
 In the React component tag that is rendering our content to the page we will create what looks like a custom html attribute and give it some information to pass down to the component.
 
-Things to be aware of: by default an html element expects a string to be assigned to an html attribute. This behavior is carried over into JSX; however, we usually want to pass a lot more than a string. Luckily react gives us the ability to pass more complex variables using curly braces `{}`.
+**NOTE** By default an html element expects a string to be assigned to an html attribute. This behavior is carried over into JSX; however, we usually want to pass a lot more than a string. Luckily ==react gives us the ability to pass more complex variables via attributes using curly braces `{}`.==
 
 ```jsx
 import MyComponent from "./components/MyComponent";
@@ -127,7 +127,7 @@ function App() {
 export default App;
 ```
 
-Now that we are passing props down to our component we need to expose those in the component itself. All the custom attributes we defined a.k.a props are stored in a props variable that the react component has access to.
+Now that we are passing props down to our component we need to expose those in the component itself. All the custom attributes we defined a.k.a props are stored in an object called props that the react component has access to.
 
 In the react component we will access the props variable which is an object that contains all our props in key value pairs.
 
@@ -142,7 +142,7 @@ export const function MyComponent(props) => {
 }
 ```
 
-The key things to notice in the above snippet is that props is pulled in as a parameter of MyComponent, then we access the key value pairs of the props object via the dot notation `props.myProp` inside our jsx return.
+**NOTE** The key things to notice in the above snippet is that the ==`props` object is pulled in as a parameter of MyComponent, then we access the key value pairs of the props object via the dot notation `props.myProp` inside our jsx return.==
 
 Now remember how jsx acts like html. So in order to use a variable inside of the html. Just like we did before we wrap the variable in curly braces `{props.myProp}` in order to display the actual content of the variable.
 
@@ -158,17 +158,60 @@ Lets set it up, first we will need an array of data to map through
 const data = ["First", "Second", "Third"];
 ```
 
+Now we can map through our data and return a React Element for each variable in our array.
+
 ```jsx
+const componentList = data.map((text) => {
+  return <MyComponent thisIsTheParagraphText={text} />;
+});
+```
+
+So now `componentList` is an array of React elements that looks like.
+
+```jsx
+const componentList = [
+  <MyComponent thisIsTheParagraphText='First' />,
+  <MyComponent thisIsTheParagraphText='Second' />,
+  <MyComponent thisIsTheParagraphText='Third' />,
+];
+```
+
+And we can display this list of components by passing the variable that contains the array directly into our main jsx return.
+
+```jsx
+const data = ["First", "Second", "Third"];
+
+const componentList = data.map((text) => {
+  return <MyComponent thisIsTheParagraphText={text} />;
+});
+
 function App() {
-  return (
-    <div className='App'>
-      <MyComponent />
-    </div>
-  );
+  return <div className='App'>{componentList}</div>;
 }
 
 export default App;
 ```
+
+This is one of the cleanest work flows for generating a dynamic list of content. It is also possible to map through an array directly in the primary jsx return as well.
+
+```jsx
+const data = ["First", "Second", "Third"];
+
+function App() {
+  return (
+      <div className='App'>
+      {data.map((text) => (
+          <MyComponent thisIsTheParagraphText={text} />
+          ));
+        }
+      </div>
+      );
+}
+
+export default App;
+```
+
+This is also a completely valid way of returning an array of react elements inside of the jsx. One important **NOTE** is the addition of an _implicit_ return. ==This is when you make a callback function and do not include curly braces and either point to a single element you want to return or wrap what you want to return in parentheses.== You will often see this method used when mapping through arrays in react.
 
 ### Useful resources
 
