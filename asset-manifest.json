@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/mini-apprentice-review/static/css/main.60918089.css",
-    "main.js": "/mini-apprentice-review/static/js/main.d75d621b.js",
+    "main.css": "/mini-apprentice-review/static/css/main.6a795f2f.css",
+    "main.js": "/mini-apprentice-review/static/js/main.da2c299d.js",
     "static/js/787.51b196bf.chunk.js": "/mini-apprentice-review/static/js/787.51b196bf.chunk.js",
     "static/media/hero-image.jpg": "/mini-apprentice-review/static/media/hero-image.8764894abfc45a2a4feb.jpg",
     "static/media/logo-white.svg": "/mini-apprentice-review/static/media/logo-white.cac496909d91acf428534b5e577bd506.svg",
     "static/media/logo.svg": "/mini-apprentice-review/static/media/logo.ea94101c0f4d6afaa3d6d1e215a2c3d1.svg",
-    "static/media/icon-instagram.svg": "/mini-apprentice-review/static/media/icon-instagram.8d2056d9a66141651a09b7fe18adf53e.svg",
-    "static/media/icon-twitter.svg": "/mini-apprentice-review/static/media/icon-twitter.ec3f935d03eedaef534414de34de7316.svg",
+    "static/media/icon-instagram.svg": "/mini-apprentice-review/static/media/icon-instagram.3ebd3bd5fb63e9e5ef45e8f65f489f8b.svg",
+    "static/media/icon-twitter.svg": "/mini-apprentice-review/static/media/icon-twitter.355f3dad8730f20154e8e16dfe437b18.svg",
     "static/media/icon-logo.svg": "/mini-apprentice-review/static/media/icon-logo.08b109df1d8063e8332d6d47453ab94e.svg",
     "index.html": "/mini-apprentice-review/index.html",
-    "static/media/icon-facebook.svg": "/mini-apprentice-review/static/media/icon-facebook.76b1aa9f4030eaa6ef8bf9537e7ae270.svg",
-    "main.60918089.css.map": "/mini-apprentice-review/static/css/main.60918089.css.map",
-    "main.d75d621b.js.map": "/mini-apprentice-review/static/js/main.d75d621b.js.map",
+    "static/media/icon-facebook.svg": "/mini-apprentice-review/static/media/icon-facebook.0b99fc65239538f224596b35094993cf.svg",
+    "main.6a795f2f.css.map": "/mini-apprentice-review/static/css/main.6a795f2f.css.map",
+    "main.da2c299d.js.map": "/mini-apprentice-review/static/js/main.da2c299d.js.map",
     "787.51b196bf.chunk.js.map": "/mini-apprentice-review/static/js/787.51b196bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60918089.css",
-    "static/js/main.d75d621b.js"
+    "static/css/main.6a795f2f.css",
+    "static/js/main.da2c299d.js"
   ]
 }
