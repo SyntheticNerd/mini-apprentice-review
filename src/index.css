@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* Don't forget to remove some default css to make our styling slightly more predictable. */
 
 body {
   margin: 0;
@@ -86,6 +87,11 @@ code {
   border: none;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
   color: white;
+  transition: transform 0.3s;
+}
+
+.heroInfo button:hover {
+  transform: scale(1.2);
 }
 
 .testimonialSection {
@@ -93,6 +99,8 @@ code {
   place-items: center;
   padding: 100px 0px;
 }
+
+/* I used grid-template as a convenient way to make a re-organizable grid */
 
 .testimonyGrid {
   display: grid;
@@ -211,4 +219,17 @@ code {
   border-radius: 50%;
   display: grid;
   place-items: center;
+}
+/* This is what I was referring to in the social component. Here we are setting the fill of the svg to white.
+Then when we hover we change it to blue. */
+.footSocial svg {
+  fill: white;
+}
+
+.footSocial li:hover svg {
+  fill: rgb(99, 163, 177);
+}
+
+.footSocial li:hover {
+  border: 2px solid rgb(99, 163, 177);
 }

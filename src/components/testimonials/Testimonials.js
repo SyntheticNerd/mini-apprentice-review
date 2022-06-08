@@ -5,7 +5,9 @@ import testimonyImg2 from "../../images/image-jonathan.jpg";
 import testimonyImg3 from "../../images/image-kira.jpg";
 import testimonyImg4 from "../../images/image-jeanette.jpg";
 import testimonyImg5 from "../../images/image-patrick.jpg";
-
+//Here we have created a simple array that contains the data we need for each testimonial in an object.
+//We can then access the individual elements of the array and pass that data down to a component for each testimonial
+//We can even map through the data to render all the content we need in one variable.
 const data = [
   {
     id: "testimony1",
@@ -63,11 +65,14 @@ export default function Testimonials() {
   return (
     <section className='testimonialSection'>
       <div className='testimonyGrid'>
-        <Testimony data={data[0]}/>
-        <Testimony data={data[1]}/>
-        <Testimony data={data[2]}/>
-        <Testimony data={data[3]}/>
-        <Testimony data={data[4]}/>
+        {/* We pass the data for each testimony down to the testimony component through a prop call "data" */}
+        {/* You can name props whatever you like, they have to be lower case and can not be a 
+            reserved keyword like "className", "for", "key", "id" */}
+        <Testimony data={data[0]} />
+        <Testimony data={data[1]} />
+        <Testimony data={data[2]} />
+        <Testimony data={data[3]} />
+        <Testimony data={data[4]} />
       </div>
     </section>
   );
